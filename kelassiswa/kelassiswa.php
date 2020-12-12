@@ -95,7 +95,7 @@ $query = mysqli_query($conn,$perintahQuery);
       <td><?= $row['nama_kelas']?></td>
       <td><?= $row['wali_kelas']?></td>
       <td><?= $row['statuss']?></td>
-      <td><a href="kelasedit.php?id=<?= $row['id'];?>"><img src="../img/edit.png" width="30px"></a> | <a href="kelashapus.php?id=<?= $row['id'];?>"><img src="../img/hapus.png" onclick=" return confirm('Apakah anda ingin menghapus?');"width="30px"></a></td>
+      <td><a href="klssisedit.php?id=<?= $row['id'];?>"><img src="../img/edit.png" width="30px"></a> | <a href="kelashapus.php?id=<?= $row['id'];?>"><img src="../img/hapus.png" onclick=" return confirm('Apakah anda ingin menghapus?');"width="30px"></a></td>
     </tr>
   </tbody>
   <?php $i++;?>
