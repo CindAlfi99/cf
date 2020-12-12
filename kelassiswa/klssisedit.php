@@ -2,7 +2,7 @@
 require '../tes.php';
 require '../conn.php';
 
-//tangkap get
+//if,get terpanggil
 // $id= $_GET['id'];
 if(isset($_GET['id'])){
   $id= $_GET['id'];
@@ -10,6 +10,7 @@ if(isset($_GET['id'])){
   echo "<h1> Halaman tidak ditemukan</h1>";
   exit;
 }
+
 //edit data
 $edit = mysqli_query($conn, "SELECT * FROM kelassiswa WHERE id= $id");
 //ambil data
@@ -17,6 +18,8 @@ $result = mysqli_fetch_assoc($edit);
 //ketika tombol edit diklik
 if(isset($_POST['submitG'])){
  //tangkap name
+
+
  $nis = $_POST['nis'];
  $nama = $_POST['namasis'];
  $jurusan = $_POST['jurusan'];
@@ -25,6 +28,7 @@ if(isset($_POST['submitG'])){
  $namkel = $_POST['namaK'];
  $walikel = $_POST['namaW'];
  $status = $_POST['statuss'];
+ 
 
  //masukkan ke db
     //ambil dan rubah
@@ -37,7 +41,7 @@ if(isset($_POST['submitG'])){
         echo "<script>alert('data gagal diubah!');
         document.location.href='kelassiswa.php';</script>";
     }
-
+  
 
 }
 
@@ -76,7 +80,7 @@ if(isset($_POST['submitG'])){
     <!-- select option tahun ajaran -->
     <div class="form-group col-md-6">
       <label>Tahun Ajaran </label>
-    <select class="custom-select" name="thnajaran" value=" <?=$result['tahun_ajaran']?>">
+    <select class="custom-select" name="thnajaran">
   <option selected>Pilih</option>
   <?php $array = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020];?>
   <?php foreach($array as $arr): ?>
