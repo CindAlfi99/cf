@@ -24,7 +24,8 @@ if(isset($_POST['submitS'])){
 }
 else{
         echo "<script>alert('data gagal ditambah!');
-        document.location.href='kelassiswa.php';</script>";
+        document.location.href='klssistambah.php';</script>";
+       
         exit;
 
 }

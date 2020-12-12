@@ -65,7 +65,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="kelas/kelas.php">Kelas</a>
                                 <a class="dropdown-item" href="matpel/matpelsiswa.php">Mata Pelajaran</a>
-                                <a class="dropdown-item" href="#">Kelas Siswa</a>
+                                <a class="dropdown-item" href="kelassiswa/kelassiswa.php">Kelas Siswa</a>
                                 <a class="dropdown-item" href="#">Nilai</a>
                               
                             </div>
