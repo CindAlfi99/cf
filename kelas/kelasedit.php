@@ -23,7 +23,7 @@ if(isset($_POST['submitG'])){
     $namaGuru = $_POST['namaG'];
     $status = $_POST['status'];
     //ambil dan rubah
-    mysqli_query($conn, "UPDATE kelas SET kode_kelas= '$kodKelas',tahun_ajaran= '$tahunAj',kelas= '$kelas', nama_guru=$namaGuru, statuss= '$status' WHERE id=$id");
+    mysqli_query($conn, "UPDATE kelas SET kode_kelas= '$kodKelas',tahun_ajaran= '$tahunAj',kelas= '$kelas', nama_guru='$namaGuru', statuss= '$status' WHERE id=$id");
     //jika berhasil
     if(mysqli_affected_rows($conn) > 0){
         echo "<script>alert('data berhasil diubah!');

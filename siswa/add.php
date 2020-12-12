@@ -64,7 +64,7 @@ if (isset($_POST['submitS'])) {
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputCity">Tanggal Lahir</label>
-          <input type="text" name="tgllhrS" class="form-control" id="inputCity">
+          <input type="date" name="tgllhrS" class="form-control" id="inputCity">
         </div>
 
         <div class="form-group col-md-6">

@@ -13,13 +13,13 @@ if(isset($_GET['id'])){
 
 //edit data
 $edit = mysqli_query($conn, "SELECT * FROM kelassiswa WHERE id= $id");
+
 //ambil data
 $result = mysqli_fetch_assoc($edit);
 //ketika tombol edit diklik
-if(isset($_POST['submitG'])){
+
+if(isset($_POST['submitS'])){
  //tangkap name
-
-
  $nis = $_POST['nis'];
  $nama = $_POST['namasis'];
  $jurusan = $_POST['jurusan'];
@@ -29,10 +29,11 @@ if(isset($_POST['submitG'])){
  $walikel = $_POST['namaW'];
  $status = $_POST['statuss'];
  
-
+//  var_dump($_POST);
+//  exit;
  //masukkan ke db
     //ambil dan rubah
-    mysqli_query($conn, "UPDATE kelassiswa SET nis= '$nis',nama_siswa= '$nama',jurusan= '$jurusan',tahun_ajaran= '$tahunAj',kelas= '$kelas',nama_kelas= '$namkel',wali_kelas= '$walikel',statuss= '$status' WHERE id=$id");
+    mysqli_query($conn, "UPDATE kelassiswa SET nis='$nis',nama_siswa='$nama',jurusan='$jurusan',tahun_ajaran='$tahunAj',kelas='$kelas',nama_kelas='$namkel',wali_kelas='$walikel',statuss='$status' WHERE id=$id");
     //jika berhasil
     if(mysqli_affected_rows($conn) > 0){
         echo "<script>alert('data berhasil diubah!');
@@ -74,7 +75,7 @@ if(isset($_POST['submitG'])){
     </div>
     <div class="form-group col-md-6">
       <label for="jurusan">Jurusan</label>
-      <input type="text" name="jurusan" class="form-control" id="jurusan" value=" <?=$result['jurusan']?>">
+      <input type="text" name="jurusan" class="form-control" id="jurusan" value=" <?=$result['jurusan'];?>">
     </div>
 
     <!-- select option tahun ajaran -->
@@ -84,7 +85,8 @@ if(isset($_POST['submitG'])){
   <option selected>Pilih</option>
   <?php $array = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020];?>
   <?php foreach($array as $arr): ?>
-  <option value="<?=$arr;?>" <?= $result['tahun_ajaran'] == $arr ? "selected" : ""?>><?=$arr;?></option>
+  <option value="<?=$arr;?>" <?= $result['tahun_ajaran'] == $arr ? "selected" : ""
+  ?>><?=$arr;?></option>
   <?php endforeach; ?>
   </select>
   </div>

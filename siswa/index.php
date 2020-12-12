@@ -51,7 +51,7 @@ if (isset($_POST['tampil'])) {
     <div class="container">
       <div class="row mt-5 mb-4">
         <!-- tambah data -->
-        <div class="col"><a href="tambahsiswa.php"><img src="../img/plus.png" width="30px"> Tambah data</a></div>
+        <div class="col"><a href="add.php"><img src="../img/plus.png" width="30px"> Tambah data</a></div>
         <div class="col">
           <!-- tombol search -->
           <div>
