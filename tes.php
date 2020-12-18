@@ -54,7 +54,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="guru.php">Guru</a>
+                                <a class="dropdown-item" href="guru/index.php">Guru</a>
                                 <a class="dropdown-item" href="siswa/siswa.php">Siswa</a>
                             </div>
                         </li>

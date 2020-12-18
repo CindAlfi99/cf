@@ -1,5 +1,5 @@
 <?php
-require 'conn.php';
+require '../conn.php';
 $perintahQuery = "SELECT * FROM guru";
 $query = mysqli_query($conn, $perintahQuery);
 //tombol show
@@ -20,7 +20,7 @@ if (isset($_POST['tampil'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
 
   <title>Guru</title>
   <style>
@@ -105,9 +105,9 @@ if (isset($_POST['tampil'])) {
     </div>
   </div>
   <!-- button back -->
-  <script src="jquery/jquery.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="ajax/ajax.js"></script>
+  <script src="../jquery/jquery.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="../ajax/ajax.js"></script>
 </body>
 
 </html>

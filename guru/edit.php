@@ -1,5 +1,5 @@
 <?php
-require 'conn.php';
+require '../conn.php';
 
 //tangkap get
 $id = $_GET['id'];
@@ -37,7 +37,7 @@ if (isset($_POST['submitG'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <title>Edit </title>
 </head>
 
@@ -89,9 +89,9 @@ if (isset($_POST['submitG'])) {
       <!-- button back -->
       <button type="button" class="btn btn-link mt-5 float-right" onclick="document.location.href='index.php';">Back</button>
     </div>
-    <script src="jquery/jquery.js"></script>
-    <script src="sweetalert2.all.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="../jquery/jquery.js"></script>
+    <script src="../sweetalert2.all.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 
   </body>
 
