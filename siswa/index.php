@@ -78,6 +78,9 @@ if (isset($_POST['tampil'])) {
             <th scope="col">Jenis Kelamin</th>
             <th scope="col">Telepon</th>
             <th scope="col">Tanggal Lahir</th>
+            <th scope="col">Agama</th>
+            <th scope="col">Tahun Angkatan</th>
+            <th scope="col">Status</th>
             <th scope="col">Foto</th>
             <th scope="col">Aksi</th>
           </tr>
@@ -95,6 +98,9 @@ if (isset($_POST['tampil'])) {
               <td><?= $row['jenis_kelamin'] ?></td>
               <td><?= $row['telepon'] ?></td>
               <td><?= $row['tanggal_lahir'] ?></td>
+              <td><?= $row['agama'] ?></td>
+              <td><?= $row['tahun_angkatan'] ?></td>
+              <td><?= $row['statuss'] ?></td>
               <td><?= $row['foto'] ?></td>
               <td><a href="edit.php?id=<?= $row['id']; ?>"><img src="../img/edit.png" width="30px"></a> | <a href="delete.php?id=<?= $row['id']; ?>"><img src="../img/hapus.png" onclick=" return confirm('Apakah anda ingin menghapus?');" width="30px"></a></td>
             </tr>
@@ -105,6 +111,7 @@ if (isset($_POST['tampil'])) {
     </div>
   </div>
   <!-- button back -->
+  <button type="button" class="btn btn-link mt-5 float-right d-block" onclick="document.location.href='../tes.php';">Back</button>
   <script src="../jquery/jquery.js"></script>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../ajax/ajax.js"></script>

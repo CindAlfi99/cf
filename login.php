@@ -1,4 +1,27 @@
+<?php
+require 'conn.php';
+if(isset($_POST['button1'])){
 
+
+$username= $_POST['username'];
+$password = $_POST['password'];
+$query = mysqli_query($conn, "SELECT id_user FROM user WHERE id_user = '$username'");
+
+
+if($query){
+    
+    echo "<script>alert('Anda berhasil login!');
+    document.location.href='tes.php';
+    </script>";
+   
+}else{
+    echo "<script>alert('Anda gagal login!');
+    document.location.href='login.php';
+    </script>";
+}
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,12 +65,13 @@
 
     <div class="container bg-light">
 
-        <div class="login">
+        
 
             <h2>Sign In</h2>
-          
+            <div class="login">
+          <form action="" method="post">
             <nav class="navbar navbar-light">
-                <form class="form-inline">
+                <div class="form-inline">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><img src="img/user.png" width="20px"height="20px"></span>
@@ -55,10 +79,10 @@
                         <!-- input label -->
                         <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username" id="username"aria-describedby="basic-addon1">
                     </div>
-                </form>
+                </div>
             </nav>
             <nav class="navbarr navbar-light">
-                <form class="form-inline">
+                <div class="form-inline">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><img src="img/padlock.png" width="20px"height="20px"></span>
@@ -66,7 +90,7 @@
                         <!-- input label -->
                         <input type="password" class="form-control" name="password" id="password"placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                     </div>
-                </form>
+                </div>
                 <!-- remember me -->
                 <div class="form-group mt-1">
                     <div class="form-check">
@@ -78,16 +102,18 @@
                 </div>
                 <!-- button -->
                 <div>
-                    <button type="submit" name="button"class="btn btn-primary btn-sm p-1 ">Sign In</button>
+                    <button type="submit" name="button1"class="btn btn-primary btn-sm p-1 ">Sign In</button>
 
-                    <button type="submit" name="button" class="btn btn-outline-success p-1">Sign Up</button>
+                    <button type="submit" name="button2" class="btn btn-outline-success p-1"><a href="signup.php">Sign Up</a></button>
                 </div>
                 <div>
             </nav>
             </div>
+            </form>
+            
             <!-- register -->
             <div class="register">
-                <span>I'am a new user. <a href="#">Sign Up</a></span>
+                <span>I'am a new user. <a href="signup.php">Sign Up</a></span>
 
 
 

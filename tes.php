@@ -1,6 +1,4 @@
-<?php 
 
-?>
 <!doctype html>
 <html lang="en">
 
@@ -55,7 +53,7 @@
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Info</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="guru/index.php">Guru</a>
-                                <a class="dropdown-item" href="siswa/siswa.php">Siswa</a>
+                                <a class="dropdown-item" href="siswa/index.php">Siswa</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -66,14 +64,14 @@
                                 <a class="dropdown-item" href="kelas/kelas.php">Kelas</a>
                                 <a class="dropdown-item" href="matpel/matpelsiswa.php">Mata Pelajaran</a>
                                 <a class="dropdown-item" href="kelassiswa/kelassiswa.php">Kelas Siswa</a>
-                                <a class="dropdown-item" href="#">Nilai</a>
+                                <a class="dropdown-item" href=nilai/nilai.php>Nilai</a>
                               
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cetak</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Laporan Siswa</a>
+                                <a class="dropdown-item" href="laporanGuru/siswa.php">Laporan Siswa</a>
                                 <a class="dropdown-item" href="#">Laporan Guru</a>
                                 <a class="dropdown-item" href="#">Laporan Kelas</a>
                                 <a class="dropdown-item" href="#">Laporan Nilai</a>

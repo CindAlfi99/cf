@@ -8,9 +8,13 @@ if (isset($_POST['submitS'])) {
   $jenkel = $_POST['jk'];
   $telpon = $_POST['telponS'];
   $tgllhr = $_POST['tgllhrS'];
+  $agama = $_POST['agama'];
+  $tahun_angkatan = $_POST['tahun_angkatan'];
+  $status = $_POST['statuss'];
+ 
   $foto = $_POST['fotoS'];
   //masukkan ke db
-  $myquery = mysqli_query($conn, "INSERT INTO siswa VALUES('','$nis','$nama','$jenkel',$telpon,'$tgllhr','$foto')");
+  $myquery = mysqli_query($conn, "INSERT INTO siswa VALUES('','$nis','$nama','$jenkel',$telpon,'$tgllhr','$agamaa','$tahun_angkatan','$status','$foto')");
 
   if (mysqli_affected_rows($conn) > 0) {
     header('Location: index.php');
@@ -66,6 +70,40 @@ if (isset($_POST['submitS'])) {
           <label for="inputCity">Tanggal Lahir</label>
           <input type="date" name="tgllhrS" class="form-control" id="inputCity">
         </div>
+        <div class="form-group col-md-6">
+      <label>Agama </label>
+    <select class="custom-select" name="agama">
+  <option selected>Pilih</option>
+  <?php $array = [Islam,Kristen,Protestan,Hindu,Konghuchu];?>
+  <?php foreach($array as $arr): ?>
+  <option value="<?=$arr;?>" <?= $result['agama'] == $arr ? "selected" : ""
+  ?>><?=$arr;?></option>
+  <?php endforeach; ?>
+  </select>
+  </div>
+        
+        <div class="form-group col-md-6">
+      <label>Tahun Angkatan </label>
+    <select class="custom-select" name="tahun_angkatan">
+  <option selected>Pilih</option>
+  <?php $array = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020];?>
+  <?php foreach($array as $arr): ?>
+  <option value="<?=$arr;?>" <?= $result['tahun_angkatan'] == $arr ? "selected" : ""
+  ?>><?=$arr;?></option>
+  <?php endforeach; ?>
+  </select>
+  </div>
+
+        <div class="form-group col-md-6">
+          <label>Status </label>
+          <select class="custom-select" name="statuss">
+            <option selected>Pilih jenis kelamin</option>
+            <option value="Aktif" value="Wanita" <?= $result['statuss'] == "Aktif" ? "selected" : "" ?>>Aktif</option>
+            <option value="Tidak Aktif" <?= $result['statuss'] == "TidakAktif" ? "selected" : "" ?>>Tidak Aktif</option>
+          </select>
+        </div>
+
+        
 
         <div class="form-group col-md-6">
           <label for="inputZip">Foto</label>
